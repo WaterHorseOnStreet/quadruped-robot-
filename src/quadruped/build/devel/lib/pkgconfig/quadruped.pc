@@ -1,0 +1,8 @@
+prefix=/home/lie/Downloads/quad_ws/src/quadruped/build/devel
+
+Name: quadruped
+Description: Description of quadruped
+Version: 0.0.0
+Cflags: 
+Libs: -L${prefix}/lib 
+Requires: 

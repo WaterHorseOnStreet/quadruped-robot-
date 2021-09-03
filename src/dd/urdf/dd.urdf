@@ -1,0 +1,1103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- This URDF was automatically created by SolidWorks to URDF Exporter! Originally created by Stephen Brawner (brawner@gmail.com) 
+     Commit Version: 1.6.0-1-g15f4949  Build Version: 1.6.7594.29634
+     For more information, please see http://wiki.ros.org/sw_urdf_exporter -->
+<robot
+  name="dd">
+  <link
+    name="base_link">
+    <inertial>
+      <origin
+        xyz="-0.00026982 0.0011604 -0.0054825"
+        rpy="0 0 0" />
+      <mass
+        value="0.43373" />
+      <inertia
+        ixx="0.00050607"
+        ixy="2.8379E-08"
+        ixz="-7.5911E-08"
+        iyy="0.00013888"
+        iyz="-1.9807E-07"
+        izz="0.00052158" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://dd/meshes/base_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 0.423529411765 0.0392156862745 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://dd/meshes/base_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <link
+    name="FR_hip">
+    <inertial>
+      <origin
+        xyz="-0.01 -0.016533 0.01"
+        rpy="0 0 0" />
+      <mass
+        value="0.038771" />
+      <inertia
+        ixx="5.5867E-06"
+        ixy="7.7162E-15"
+        ixz="3.4527E-13"
+        iyy="5.9876E-06"
+        iyz="-4.4962E-15"
+        izz="2.1978E-06" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://dd/meshes/FR_hip.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0 0 0.8 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://dd/meshes/FR_hip.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="FR_hip_joint"
+    type="revolute">
+    <origin
+      xyz="-0.068663 -0.08865 -0.0075892"
+      rpy="-1.5708 -1.2604 3.1416" />
+    <parent
+      link="base_link" />
+    <child
+      link="FR_hip" />
+    <axis
+      xyz="0 0 1" />
+    <limit
+      lower="-0.80285"
+      upper="0.80285"
+      effort="20"
+      velocity="52.4" />
+    <dynamics
+      damping="0"
+      friction="0" />
+  </joint>
+  <link
+    name="FR_upper">
+    <inertial>
+      <origin
+        xyz="0.0076438 -0.04431 1.8027E-06"
+        rpy="0 0 0" />
+      <mass
+        value="0.034183" />
+      <inertia
+        ixx="3.8769E-05"
+        ixy="5.2555E-07"
+        ixz="-4.8285E-10"
+        iyy="1.7678E-06"
+        iyz="-5.4044E-10"
+        izz="3.8447E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://dd/meshes/FR_upper.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0 0.8 0 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://dd/meshes/FR_upper.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="FR_upper_joint"
+    type="revolute">
+    <origin
+      xyz="0 0.00615 0"
+      rpy="2.3688 0 1.5708" />
+    <parent
+      link="FR_hip" />
+    <child
+      link="FR_upper" />
+    <axis
+      xyz="1 0 0" />
+    <limit
+      lower="-0.82"
+      upper="0"
+      effort="55"
+      velocity="28.6" />
+    <dynamics
+      damping="0"
+      friction="0" />
+  </joint>
+  <link
+    name="FR_lower">
+    <inertial>
+      <origin
+        xyz="-0.00047359 -0.042592 -0.042689"
+        rpy="0 0 0" />
+      <mass
+        value="0.02613" />
+      <inertia
+        ixx="3.4619E-05"
+        ixy="2.5066E-07"
+        ixz="2.5642E-07"
+        iyy="2.1712E-05"
+        iyz="-1.6E-05"
+        izz="1.3723E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://dd/meshes/FR_lower.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 0 0 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://dd/meshes/FR_lower.STL" />
+      </geometry>
+    </collision>
+  </link>  
+  <joint
+    name="FR_lower_joint"
+    type="revolute">
+    <origin
+      xyz="0.008 -0.1 0"
+      rpy="0.73678 0 0" />
+    <parent
+      link="FR_upper" />
+    <child
+      link="FR_lower" />
+    <axis
+      xyz="1 0 0" />
+    <limit
+      lower="0"
+      upper="1.56"
+      effort="55"
+      velocity="28.6" />
+    <dynamics
+      damping="0"
+      friction="0" />
+  </joint>
+
+  <link
+    name="FR_toe">
+    <inertial>
+      <origin
+        xyz="-0.00047359 -0.0739421 -0.0739421"
+        rpy="0 0 0" />
+      <mass
+        value="0.0002" />
+      <inertia
+        ixx="3.4619E-05"
+        ixy="2.5066E-07"
+        ixz="2.5642E-07"
+        iyy="2.1712E-05"
+        iyz="-1.6E-05"
+        izz="1.3723E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <box size="0.001 0.001 0.001"/> 
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0 0 0 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <box size="0.001 0.001 0.001"/>
+      </geometry>
+    </collision>
+  </link>  
+  <joint
+    name="FR_toe_joint"
+    type="fixed">
+    <origin
+      xyz="-0.00047359 -0.0739421 -0.0739421"
+      rpy="0.73678 0 0" />
+    <parent
+      link="FR_lower" />
+    <child
+      link="FR_toe" />
+  </joint>
+  <transmission name="FR_hip_tran">
+    <type>transmission_interface/SimpleTransmission</type>
+    <joint name="FR_hip_joint">
+      <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+    </joint>
+    <actuator name="FR_hip_motor">
+      <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+      <mechanicalReduction>1</mechanicalReduction>
+    </actuator>
+  </transmission>
+  <transmission name="FR_upper_tran">
+    <type>transmission_interface/SimpleTransmission</type>
+    <joint name="FR_upper_joint">
+      <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+    </joint>
+    <actuator name="FR_upper_motor">
+      <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+      <mechanicalReduction>1</mechanicalReduction>
+    </actuator>
+  </transmission>
+  <transmission name="FR_lower_tran">
+    <type>transmission_interface/SimpleTransmission</type>
+    <joint name="FR_lower_joint">
+      <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+    </joint>
+    <actuator name="FR_lower_motor">
+      <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+      <mechanicalReduction>1</mechanicalReduction>
+    </actuator>
+  </transmission>
+
+
+  <link
+    name="FL_hip">
+    <inertial>
+      <origin
+        xyz="0.01 -0.016533 0.01"
+        rpy="0 0 0" />
+      <mass
+        value="0.038771" />
+      <inertia
+        ixx="5.5867E-06"
+        ixy="-7.5247E-15"
+        ixz="3.4446E-13"
+        iyy="5.9876E-06"
+        iyz="4.3935E-15"
+        izz="2.1978E-06" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://dd/meshes/FL_hip.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0 0 0.8 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://dd/meshes/FL_hip.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="FL_hip_joint"
+    type="revolute">
+    <origin
+      xyz="0.06883 -0.08865 -0.0070456"
+      rpy="-1.5708 1.2833 -3.1416" />
+    <parent
+      link="base_link" />
+    <child
+      link="FL_hip" />
+    <axis
+      xyz="0 0 1" />
+    <limit
+      lower="-0.80285"
+      upper="0.80285"
+      effort="20"
+      velocity="52.4" />
+    <dynamics
+      damping="0"
+      friction="0" />
+  </joint>
+  <link
+    name="FL_upper">
+    <inertial>
+      <origin
+        xyz="0.0076438 -0.04431 1.8026E-06"
+        rpy="0 0 0" />
+      <mass
+        value="0.034183" />
+      <inertia
+        ixx="3.8769E-05"
+        ixy="5.2554E-07"
+        ixz="-4.8282E-10"
+        iyy="1.7678E-06"
+        iyz="-5.4063E-10"
+        izz="3.8447E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://dd/meshes/FL_upper.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0 0.8 0 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://dd/meshes/FL_upper.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="FL_upper_joint"
+    type="revolute">
+    <origin
+      xyz="0 0.00615 0"
+      rpy="0.76303 0 1.5708" />
+    <parent
+      link="FL_hip" />
+    <child
+      link="FL_upper" />
+    <axis
+      xyz="1 0 0" />
+    <limit
+      lower="0"
+      upper="0.85"
+      effort="55"
+      velocity="28.6" />
+    <dynamics
+      damping="0"
+      friction="0" />
+  </joint>
+  <link
+    name="FL_lower">
+    <inertial>
+      <origin
+        xyz="-0.00047369 -0.042592 0.042689"
+        rpy="0 0 0" />
+      <mass
+        value="0.02613" />
+      <inertia
+        ixx="3.4619E-05"
+        ixy="2.507E-07"
+        ixz="-2.5641E-07"
+        iyy="2.1712E-05"
+        iyz="1.6E-05"
+        izz="1.3723E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://dd/meshes/FL_lower.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 0 0 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://dd/meshes/FL_lower.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="FL_lower_joint"
+    type="revolute">
+    <origin
+      xyz="0.00825 -0.1 0"
+      rpy="-0.70402 0 0" />
+    <parent
+      link="FL_upper" />
+    <child
+      link="FL_lower" />
+    <axis
+      xyz="1 0 0" />
+    <limit
+      lower="0"
+      upper="-1.42"
+      effort="55"
+      velocity="28.6" />
+    <dynamics
+      damping="0"
+      friction="0" />
+  </joint>
+
+  <link
+    name="FL_toe">
+    <inertial>
+      <origin
+        xyz="-0.00047359 -0.0739421 0.0739421"
+        rpy="0 0 0" />
+      <mass
+        value="0.0002" />
+      <inertia
+        ixx="3.4619E-05"
+        ixy="2.5066E-07"
+        ixz="2.5642E-07"
+        iyy="2.1712E-05"
+        iyz="-1.6E-05"
+        izz="1.3723E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <box size="0.001 0.001 0.001"/> 
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0 0 0 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <box size="0.001 0.001 0.001"/>
+      </geometry>
+    </collision>
+  </link>  
+  <joint
+    name="FL_toe_joint"
+    type="fixed">
+    <origin
+      xyz="-0.00047359 -0.0739421 0.0739421"
+      rpy="0.73678 0 0" />
+    <parent
+      link="FL_lower" />
+    <child
+      link="FL_toe" />
+  </joint>
+  <transmission name="FL_hip_tran">
+    <type>transmission_interface/SimpleTransmission</type>
+    <joint name="FL_hip_joint">
+      <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+    </joint>
+    <actuator name="FL_hip_motor">
+      <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+      <mechanicalReduction>1</mechanicalReduction>
+    </actuator>
+  </transmission>
+  <transmission name="FL_upper_tran">
+    <type>transmission_interface/SimpleTransmission</type>
+    <joint name="FL_upper_joint">
+      <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+    </joint>
+    <actuator name="FL_upper_motor">
+      <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+      <mechanicalReduction>1</mechanicalReduction>
+    </actuator>
+  </transmission>
+  <transmission name="FL_lower_tran">
+    <type>transmission_interface/SimpleTransmission</type>
+    <joint name="FL_lower_joint">
+      <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+    </joint>
+    <actuator name="FL_lower_motor">
+      <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+      <mechanicalReduction>1</mechanicalReduction>
+    </actuator>
+  </transmission>
+
+  <link
+    name="RR_hip">
+    <inertial>
+      <origin
+        xyz="-0.01 -0.016533 0.01"
+        rpy="0 0 0" />
+      <mass
+        value="0.038771" />
+      <inertia
+        ixx="5.5867E-06"
+        ixy="7.4367E-15"
+        ixz="3.4416E-13"
+        iyy="5.9876E-06"
+        iyz="-4.3455E-15"
+        izz="2.1978E-06" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://dd/meshes/RR_hip.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0 0 0.8 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://dd/meshes/RR_hip.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="RR_hip_joint"
+    type="revolute">
+    <origin
+      xyz="-0.06889 0.10865 -0.0068413"
+      rpy="-1.5708 -1.2919 3.1416" />
+    <parent
+      link="base_link" />
+    <child
+      link="RR_hip" />
+    <axis
+      xyz="0 0 1" />
+    <limit
+      lower="-0.80285"
+      upper="0.80285"
+      effort="20"
+      velocity="52.4" />
+    <dynamics
+      damping="0"
+      friction="0" />
+  </joint>
+  <link
+    name="RR_upper">
+    <inertial>
+      <origin
+        xyz="0.0076438 -0.04431 1.8026E-06"
+        rpy="0 0 0" />
+      <mass
+        value="0.034183" />
+      <inertia
+        ixx="3.8769E-05"
+        ixy="5.2555E-07"
+        ixz="-4.8281E-10"
+        iyy="1.7678E-06"
+        iyz="-5.4052E-10"
+        izz="3.8447E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://dd/meshes/RR_upper.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0 0.8 0 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://dd/meshes/RR_upper.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="RR_upper_joint"
+    type="revolute">
+    <origin
+      xyz="0 0.00615 0"
+      rpy="2.2445 0 1.5708" />
+    <parent
+      link="RR_hip" />
+    <child
+      link="RR_upper" />
+    <axis
+      xyz="1 0 0" />
+    <limit
+      lower="-0.82"
+      upper="0"
+      effort="55"
+      velocity="28.6" />
+    <dynamics
+      damping="0"
+      friction="0" />
+  </joint>
+  <link
+    name="RR_lower">
+    <inertial>
+      <origin
+        xyz="-0.00047359 -0.042592 -0.042689"
+        rpy="0 0 0" />
+      <mass
+        value="0.02613" />
+      <inertia
+        ixx="3.4619E-05"
+        ixy="2.5066E-07"
+        ixz="2.5642E-07"
+        iyy="2.1712E-05"
+        iyz="-1.6E-05"
+        izz="1.3723E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://dd/meshes/RR_lower.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 0 0 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://dd/meshes/RR_lower.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="RR_lower_joint"
+    type="revolute">
+    <origin
+      xyz="0.008 -0.1 0"
+      rpy="0.67743 0 0" />
+    <parent
+      link="RR_upper" />
+    <child
+      link="RR_lower" />
+    <axis
+      xyz="1 0 0" />
+    <limit
+      lower="0"
+      upper="1.56"
+      effort="55"
+      velocity="28.6" />
+    <dynamics
+      damping="0"
+      friction="0" />
+  </joint>
+
+  <link
+    name="RR_toe">
+    <inertial>
+      <origin
+        xyz="-0.00047359 -0.0744159 -0.0744159"
+        rpy="0 0 0" />
+      <mass
+        value="0.0002" />
+      <inertia
+        ixx="3.4619E-05"
+        ixy="2.5066E-07"
+        ixz="2.5642E-07"
+        iyy="2.1712E-05"
+        iyz="-1.6E-05"
+        izz="1.3723E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <box size="0.001 0.001 0.001"/> 
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0 0 0 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <box size="0.001 0.001 0.001"/>
+      </geometry>
+    </collision>
+  </link>  
+  <joint
+    name="RR_toe_joint"
+    type="fixed">
+    <origin
+      xyz="-0.00047359 -0.0739421 -0.0739421"
+      rpy="0.67743 0 0" />
+    <parent
+      link="RR_lower" />
+    <child
+      link="RR_toe" />
+  </joint>
+  <transmission name="RR_hip_tran">
+    <type>transmission_interface/SimpleTransmission</type>
+    <joint name="RR_hip_joint">
+      <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+    </joint>
+    <actuator name="RR_hip_motor">
+      <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+      <mechanicalReduction>1</mechanicalReduction>
+    </actuator>
+  </transmission>
+  <transmission name="RR_upper_tran">
+    <type>transmission_interface/SimpleTransmission</type>
+    <joint name="RR_upper_joint">
+      <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+    </joint>
+    <actuator name="RR_upper_motor">
+      <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+      <mechanicalReduction>1</mechanicalReduction>
+    </actuator>
+  </transmission>
+  <transmission name="RR_lower_tran">
+    <type>transmission_interface/SimpleTransmission</type>
+    <joint name="RR_lower_joint">
+      <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+    </joint>
+    <actuator name="RR_lower_motor">
+      <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+      <mechanicalReduction>1</mechanicalReduction>
+    </actuator>
+  </transmission>
+
+  <link
+    name="RL_hip">
+    <inertial>
+      <origin
+        xyz="0.01 -0.016533 0.01"
+        rpy="0 0 0" />
+      <mass
+        value="0.038771" />
+      <inertia
+        ixx="5.5867E-06"
+        ixy="6.9713E-15"
+        ixz="3.429E-13"
+        iyy="5.9876E-06"
+        iyz="-4.0869E-15"
+        izz="2.1978E-06" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://dd/meshes/RL_hip.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0 0 0.8 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://dd/meshes/RL_hip.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="RL_hip_joint"
+    type="revolute">
+    <origin
+      xyz="0.064307 0.08865 -0.025392"
+      rpy="-1.5708 -1.3278 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="RL_hip" />
+    <axis
+      xyz="0 0 1" />
+    <limit
+      lower="-0.80285"
+      upper="0.80285"
+      effort="20"
+      velocity="52.4" />
+    <dynamics
+      damping="0"
+      friction="0" />
+  </joint>
+  <link
+    name="RL_upper">
+    <inertial>
+      <origin
+        xyz="0.0076438 -0.04431 1.8027E-06"
+        rpy="0 0 0" />
+      <mass
+        value="0.034183" />
+      <inertia
+        ixx="3.8769E-05"
+        ixy="5.2555E-07"
+        ixz="-4.8287E-10"
+        iyy="1.7678E-06"
+        iyz="-5.4054E-10"
+        izz="3.8447E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://dd/meshes/RL_upper.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0 0.8 0 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://dd/meshes/RL_upper.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="RL_upper_joint"
+    type="revolute">
+    <origin
+      xyz="0.02 0.00615 0.02"
+      rpy="-2.3816 0 1.5708" />
+    <parent
+      link="RL_hip" />
+    <child
+      link="RL_upper" />
+    <axis
+      xyz="1 0 0" />
+    <limit
+      lower="0"
+      upper="0.85"
+      effort="55"
+      velocity="28.6" />
+    <dynamics
+      damping="0"
+      friction="0" />
+  </joint>
+  <link
+    name="RL_lower">
+    <inertial>
+      <origin
+        xyz="-0.00047369 -0.042592 0.042689"
+        rpy="0 0 0" />
+      <mass
+        value="0.02613" />
+      <inertia
+        ixx="3.4619E-05"
+        ixy="2.507E-07"
+        ixz="-2.5641E-07"
+        iyy="2.1712E-05"
+        iyz="1.6E-05"
+        izz="1.3723E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://dd/meshes/RL_lower.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 0 0 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://dd/meshes/RL_lower.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="RL_lower_joint"
+    type="revolute">
+    <origin
+      xyz="0.00825 -0.1 0"
+      rpy="-0.6587 0 0" />
+    <parent
+      link="RL_upper" />
+    <child
+      link="RL_lower" />
+    <axis
+      xyz="1 0 0" />
+    <limit
+      lower="0"
+      upper="-1.42"
+      effort="55"
+      velocity="28.6" />
+    <dynamics
+      damping="0"
+      friction="0" />
+  </joint>
+
+  <link
+    name="RL_toe">
+    <inertial>
+      <origin
+        xyz="-0.00047359 -0.0744159 0.0744159"
+        rpy="0 0 0" />
+      <mass
+        value="0.0002" />
+      <inertia
+        ixx="3.4619E-05"
+        ixy="2.5066E-07"
+        ixz="2.5642E-07"
+        iyy="2.1712E-05"
+        iyz="-1.6E-05"
+        izz="1.3723E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <box size="0.001 0.001 0.001"/> 
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0 0 0 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <box size="0.001 0.001 0.001"/>
+      </geometry>
+    </collision>
+  </link>  
+  <joint
+    name="RL_toe_joint"
+    type="fixed">
+    <origin
+      xyz="-0.00047359 -0.0739421 0.0739421"
+      rpy="0.67743 0 0" />
+    <parent
+      link="RL_lower" />
+    <child
+      link="RL_toe" />
+  </joint>
+  <transmission name="RL_hip_tran">
+    <type>transmission_interface/SimpleTransmission</type>
+    <joint name="RL_hip_joint">
+      <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+    </joint>
+    <actuator name="RL_hip_motor">
+      <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+      <mechanicalReduction>1</mechanicalReduction>
+    </actuator>
+  </transmission>
+  <transmission name="RL_upper_tran">
+    <type>transmission_interface/SimpleTransmission</type>
+    <joint name="RL_upper_joint">
+      <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+    </joint>
+    <actuator name="RL_upper_motor">
+      <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+      <mechanicalReduction>1</mechanicalReduction>
+    </actuator>
+  </transmission>
+  <transmission name="RL_lower_tran">
+    <type>transmission_interface/SimpleTransmission</type>
+    <joint name="RL_lower_joint">
+      <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+    </joint>
+    <actuator name="RL_lower_motor">
+      <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+      <mechanicalReduction>1</mechanicalReduction>
+    </actuator>
+  </transmission>
+</robot>
